@@ -12,6 +12,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
   vertical-align: middle;
   font-size: 13px;
   zoom: 1;
+  width: 100%;
   *display: inline;
   @include user-select(none);
   * {
@@ -59,18 +60,23 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
     position: relative;
     display: block;
     overflow: hidden;
-    padding: 0 0 0 8px;
-    height: 25px;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    background-color: #fff;
-    @include background(linear-gradient(top, #fff 20%, #f6f6f6 50%, #eee 52%, #f4f4f4 100%));
-    background-clip: padding-box;
-    box-shadow: 0 0 3px #fff inset, 0 1px 1px rgba(#000,.1);
-    color: #444;
     text-decoration: none;
     white-space: nowrap;
-    line-height: 24px;
+    width: 100%;
+    height: 34px;
+    padding: 2px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   }
   .chosen-default {
     color: #999;
@@ -87,7 +93,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
   }
   .chosen-single abbr {
     position: absolute;
-    top: 6px;
+    top: 10px;
     right: 26px;
     display: block;
     width: 12px;
@@ -103,7 +109,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
   }
   .chosen-single div {
     position: absolute;
-    top: 0;
+    top: 4px;
     right: 0;
     display: block;
     width: 18px;
@@ -137,9 +143,10 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
     }
   }
   .chosen-drop {
-    margin-top: -1px;
     border-radius: 0 0 4px 4px;
-    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border-top: none;
+    margin-top: -3px !important;
   }
   &.chosen-container-single-nosearch .chosen-search {
     position: absolute;
@@ -176,8 +183,8 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
       cursor: default;
     }
     &.highlighted {
-      background-color: #3875d7;
-      @include background-image(linear-gradient(#3875d7 20%, #2a62bc 90%));
+      background-color: #1abc9c;
+      background-image: none;
       color: #fff;
     }
     &.no-results {
@@ -207,14 +214,22 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
     position: relative;
     overflow: hidden;
     margin: 0;
-    padding: 0 5px;
-    width: 100%;
-    height: auto !important;
-    height: 1%;
-    border: 1px solid #aaa;
-    background-color: #fff;
-    @include background-image(linear-gradient(#eee 1%, #fff 15%));
     cursor: text;
+    width: 100%;
+    height: 34px;
+    padding: 2px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   }
   .chosen-choices li {
     float: left;
@@ -240,26 +255,23 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
     }
     &.search-choice {
       position: relative;
-      margin: 3px 5px 3px 0;
-      padding: 3px 20px 3px 5px;
-      border: 1px solid #aaa;
+      margin: 5px 0 5px 0px;
+      padding: 7px;
+      border: 1px solid #e7eaec;
       max-width: 100%;
       border-radius: 3px;
-      background-color: #eeeeee;
-      @include background-image(linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%));
-      background-size: 100% 19px;
-      background-repeat: repeat-x;
-      background-clip: padding-box;
       box-shadow: 0 0 2px #fff inset, 0 1px 0 rgba(#000,.05);
-      color: #333;
       line-height: 13px;
       cursor: default;
+      width: 100%;
+      background: rgb(243, 243, 243);
+      color: rgb(52, 73, 94);
       span {
         word-wrap: break-word;
       }
       .search-choice-close {
         position: absolute;
-        top: 4px;
+        top: 7px;
         right: 3px;
         display: block;
         width: 12px;
@@ -326,6 +338,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
     box-shadow: 0 0 5px rgba(#000,.3);
     li.search-field input[type="text"] {
       color: #222 !important;
+      height: auto;
     }
   }
 }
