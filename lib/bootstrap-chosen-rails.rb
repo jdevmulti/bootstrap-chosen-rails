@@ -1,7 +1,9 @@
 require 'chosen-rails/version'
 
-module Chosen
-  module Rails
+module Bootstrap
+  module Chosen
+    module Rails
+    end
   end
 end
 

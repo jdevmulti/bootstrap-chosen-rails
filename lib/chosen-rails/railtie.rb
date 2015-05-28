@@ -1,6 +1,8 @@
-module Chosen
-  module Rails
-    class Railtie < ::Rails::Railtie
+module Bootstrap
+  module Chosen
+    module Rails
+      class Railtie < ::Rails::Railtie
+      end
     end
   end
 end

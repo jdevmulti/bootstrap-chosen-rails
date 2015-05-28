@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.name          = 'chosen-rails'
   gem.require_paths = ['lib']
-  gem.version       = Chosen::Rails::VERSION
+  gem.version       = Bootstrap::Chosen::Rails::VERSION
 
   gem.add_dependency 'railties', '>= 3.0'
   gem.add_dependency 'coffee-rails', '>= 3.2'
